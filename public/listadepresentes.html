@@ -8,34 +8,26 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
       background-color: #fffaf8;
       color: #5a3e36;
+      line-height: 1.5;
     }
 
     header {
       text-align: center;
-      padding: 2rem 1rem 1rem;
+      padding: 2rem 1rem;
     }
-
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #7c5e58;
-    }
+    header h1 { font-size: 2rem; }
+    header p  { font-size: 1.1rem; color: #7c5e58; }
 
     section {
-      padding: 2rem 1rem;
+      padding: 1rem;
       max-width: 1200px;
       margin: auto;
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       margin-top: 2rem;
       border-bottom: 2px solid #e3c5b8;
       padding-bottom: 0.5rem;
@@ -43,7 +35,7 @@
 
     ul {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: 1fr;
       gap: 0.75rem;
       list-style: none;
       padding: 0;
@@ -51,17 +43,32 @@
     }
 
     li {
-      background-color: #fff;
+      background: #fff;
       border: 1px solid #e3c5b8;
       padding: 0.75rem 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    li a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
+    @media (min-width: 600px) {
+      ul { grid-template-columns: repeat(2, 1fr); }
+      header h1 { font-size: 2.25rem; }
+    }
+
+    @media (min-width: 900px) {
+      ul { grid-template-columns: repeat(3, 1fr); }
+      h2 { font-size: 1.5rem; }
+    }
+
+    @media (min-width: 1200px) {
+      ul { grid-template-columns: repeat(4, 1fr); }
+      section { padding: 2rem; }
+      header { padding: 3rem 1rem 2rem; }
     }
   </style>
 </head>
@@ -71,226 +78,165 @@
     <p>Ficaremos muito felizes com qualquer presente 💝</p>
   </header>
 
-  <section>
-    <h2>Cozinha</h2>
-    <ul>
-      <li>1. Conjunto de panelas antiaderente</li>
-      <li>2. Jogo de facas</li>
-      <li>3. Conjunto de potes herméticos</li>
-      <li>4. Escorredor de arroz</li>
-      <li>5. Liquidificador</li>
-      <li>6. Panela de pressão</li>
-      <li>7. Jarra de vidro</li>
-      <li>8. Peneira inox</li>
-      <li>9. Forma para bolo</li>
-      <li>10. Assadeira retangular</li>
-      <li>11. Frigideira antiaderente</li>
-      <li>12. Espremedor de alho</li>
-      <li>13. Tábua de corte</li>
-      <li>14. Colheres medidoras</li>
-      <li>15. Xícaras medidoras</li>
-      <li>16. Abridor de garrafas</li>
-      <li>17. Abridor de latas</li>
-      <li>18. Ralador 4 faces</li>
-      <li>19. Concha de feijão</li>
-      <li>20. Escumadeira</li>
-      <li>21. Espátula de silicone</li>
-      <li>22. Pegador de macarrão</li>
-      <li>23. Jogo de copos</li>
-      <li>24. Jogo de pratos</li>
-      <li>25. Jogo de talheres</li>
-      <li>26. Toalha de mesa</li>
-      <li>27. Porta temperos</li>
-      <li>28. Colher de pau</li>
-      <li>29. Espátula para bolo</li>
-      <li>30. Forminha de gelo</li>
-      <li>31. Jogo americano</li>
-      <li>32. Açucareiro</li>
-      <li>33. Bule térmico</li>
-      <li>34. Cortador de pizza</li>
-      <li>35. Faca de pão</li>
-      <li>36. Faca de carne</li>
-      <li>37. Coador de café</li>
-      <li>38. Garrafa térmica</li>
-      <li>39. Pegador de salada</li>
-      <li>40. Fruteira</li>
-      <li>41. Escorredor de pratos</li>
-      <li>42. Suporte para detergente</li>
-      <li>43. Luva térmica</li>
-      <li>44. Panos de prato</li>
-      <li>45. Jogo de xícaras</li>
-      <li>46. Espremedor de frutas</li>
-      <li>47. Leiteira</li>
-      <li>48. Timer de cozinha</li>
-      <li>49. Batedor de claras</li>
-      <li>50. Pegador de gelo</li>
-    </ul>
+  <section id="gift-list"></section>
 
-    <h2>Lavanderia</h2>
-    <ul>
-      <li>51. Cesto de roupa suja</li>
-      <li>52. Varal de chão</li>
-      <li>53. Balde com tampa</li>
-      <li>54. Rodo</li>
-      <li>55. Vassoura</li>
-      <li>56. Pá de lixo</li>
-      <li>57. Escova de roupa</li>
-      <li>58. Pregadores</li>
-      <li>59. Tábua de passar</li>
-      <li>60. Ferro de passar</li>
-      <li>61. Suporte para sabão</li>
-      <li>62. Organizadores de armário</li>
-      <li>63. Cesto dobrável</li>
-      <li>64. Luva de limpeza</li>
-      <li>65. Kit de limpeza multiuso</li>
-      <li>66. Vassoura mágica</li>
-      <li>67. Esfregão</li>
-      <li>68. Escova multiuso</li>
-      <li>69. Tapete antiderrapante</li>
-      <li>70. Balde mop giratório</li>
-      <li>71. Suporte de parede para vassouras</li>
-      <li>72. Desentupidor</li>
-      <li>73. Cabideiro de chão</li>
-      <li>74. Suporte para ferro de passar</li>
-      <li>75. Panos de chão</li>
-      <li>76. Cesto de pregadores</li>
-      <li>77. Dosador de sabão líquido</li>
-      <li>78. Tira-pelo para roupas</li>
-      <li>79. Dispenser de amaciante</li>
-      <li>80. Estendal retrátil</li>
-    </ul>
+  <script>
+    (function() {
+    	const lists = {
+    	        "Utensílios de Cozinha": [
+    	          "Afiador de faca",
+    	          "Assadeiras antiaderentes",
+    	          "Bacias",
+    	          "Batedeira Elétrica",
+    	          "Batedor manual/fouet",
+    	          "Boleador",
+    	          "Centrífuga de salada",
+    	          "Chaleira Elétrica",
+    	          "Coadores",
+    	          "Colheres de medida",
+    	          "Colheres de pau",
+    	          "Colheres para cozinhar/servir",
+    	          "Concha para sorvete",
+    	          "Conchas para sopa, feijão e molho",
+    	          "Copo medidor",
+    	          "Cortador de pizza",
+    	          "Cuscuzeira",
+    	          "Cutelo",
+    	          "Descascador de legumes",
+    	          "Escorredor de arroz",
+    	          "Escorredor de louça inox modular",
+    	          "Escorredor de macarrão",
+    	          "Escumadeiras",
+    	          "Espanador de pó",
+    	          "Espátulas",
+    	          "Triturador de alho",
+    	          "Espremedor de limão",
+    	          "Faca para carne",
+    	          "Faca para frutas/legumes",
+    	          "Faca para pão",
+    	          "Faqueiro",
+    	          "Forma para pizza",
+    	          "Formas de gelo",
+    	          "Formas para bolo",
+    	          "Formas para torta/pudim",
+    	          "Frigideiras",
+    	          "Funil",
+    	          "Kit de panelas",
+    	          "Leiteira",
+    	          "Liquidificador",
+    	          "Luva térmica",
+    	          "Manteigueira",
+    	          "Martelo de carne",
+    	          "Moedor de pimenta",
+    	          "Panela de Pressão",
+    	          "Panela de Arroz Elétrica",
+    	          "Panela de Pressão Elétrica",
+    	          "Pegador de massa",
+    	          "Pegador de salada",
+    	          "Peneiras (pequena, média e grande)",
+    	          "Pilão",
+    	          "Pincel culinário",
+    	          "Porta frios",
+    	          "Porta temperos",
+    	          "Potes para microondas e freezer",
+    	          "Potes plásticos multiuso",
+    	          "Ralador",
+    	          "Rolo para abrir massa",
+    	          "Saca rolhas",
+    	          "Sanduicheira",
+    	          "Sanduicheira Elétrica",
+    	          "Suporte para filtro de café",
+    	          "Tábua de corte de Vidro",
+    	          "Tesoura de cozinha",
+    	          "Tigela",
+    	          "Torradeira"
+    	        ],
+    	        "Utensílios de Mesa": [
+    	          "Açucareiro",
+    	          "Bandeja para café da manhã",
+    	          "Canecas",
+    	          "Copos para água",
+    	          "Garfinhos para petiscos",
+    	          "Jarras para água e suco",
+    	          "Jogo de xícaras",
+    	          "Jogos americanos",
+    	          "Porta copos",
+    	          "Porta guardanapo",
+    	          "Pratos de sobremesa",
+    	          "Pratos fundos",
+    	          "Pratos rasos",
+    	          "Saleiro, pimenteiro e paliteiro",
+    	          "Talheres",
+    	          "Toalha para mesa de quatro cadeiras",
+    	          "Descansos de panela",
+    	          "Garrafas térmicas (café e chá)",
+    	          "Queijeira",
+    	          "Bule de café"
+    	        ],
+    	        "Utensílios para Bar": [
+    	          "Abridor de lata",
+    	          "Balde e pinça de gelo",
+    	          "Copos para drinks",
+    	          "Petisqueira",
+    	          "Taças",
+    	          "Misturador de drinks"
+    	        ],
+    	        "Área de Serviço e Limpeza": [
+    	          "Avental",
+    	          "Capacho",
+    	          "Ferro de passar roupa",
+    	          "Lixeiras para pia e chão",
+    	          "Rodinho de pia",
+    	          "Suporte de detergente e esponja",
+    	          "Tábua de passar roupa",
+    	          "Vassoura/rodo e pá"
+    	        ],
+    	        "Itens para Banheiro": [
+    	          "Conjunto de toalhas de banho, rosto e mãos",
+    	          "Tapete de pedra para banheiro",
+    	          "Dispensadores de sabonete líquido",
+    	          "Bandeja ou cesto para organizar produtos de higiene pessoal",
+    	          "Espelho de aumento para maquiagem ou barbear",
+    	          "Organizadores de gavetas ou prateleiras para guardar itens de banheiro",
+    	          "Conjunto de acessórios de banheiro (porta escova de dentes, porta sabonete líquido, etc.)",
+    	          "Escova de vaso sanitário e suporte preto",
+    	          "Roupão de banho"
+    	        ],
+    	        "Itens para o Quarto": [
+    	          "Conjunto de lençóis cama king size",
+    	          "Edredom ou cobertor",
+    	          "Travesseiros",
+    	          "Manta decorativa para a cama",
+    	          "Almofadas decorativas",
+    	          "Abajures ou luminárias",
+    	          "Cortinas com blackout ou persianas",
+    	          "Kit de roupa de cama (king size) coordenada (capa de edredom, lençóis, fronhas) em um design elegante"
+    	        ]
+    	      };
 
-    <h2>Sala</h2>
-    <ul>
-      <li>81. Almofadas decorativas</li>
-      <li>82. Manta para sofá</li>
-      <li>83. Tapete decorativo</li>
-      <li>84. Abajur</li>
-      <li>85. Relógio de parede</li>
-      <li>86. Porta-retratos</li>
-      <li>87. Vasos decorativos</li>
-      <li>88. Cortina</li>
-      <li>89. Suporte de cortina</li>
-      <li>90. Aromatizador de ambiente</li>
-      <li>91. Luminária de mesa</li>
-      <li>92. Centro de mesa</li>
-      <li>93. Porta-chaves</li>
-      <li>94. Revisteiro</li>
-      <li>95. Bandeja decorativa</li>
-      <li>96. Quadro decorativo</li>
-      <li>97. Difusor de aromas</li>
-      <li>98. Caixa organizadora</li>
-      <li>99. Suporte de TV</li>
-      <li>100. Lixeira pequena</li>
-      <li>101. Porta-controle remoto</li>
-      <li>102. Velas aromáticas</li>
-      <li>103. Espelho decorativo</li>
-      <li>104. Prateleiras flutuantes</li>
-      <li>105. Puff decorativo</li>
-      <li>106. Filtro de linha</li>
-      <li>107. Protetor de sofá</li>
-      <li>108. Painel de fotos</li>
-      <li>109. Kit porta-copos</li>
-      <li>110. Enfeites de cerâmica</li>
-      <li>111. Luminária de chão</li>
-      <li>112. Relógio despertador</li>
-      <li>113. Caixa de som</li>
-      <li>114. Porta-velas</li>
-      <li>115. Bandeja para chá/café</li>
-      <li>116. Organizador de cabos</li>
-      <li>117. Placa decorativa</li>
-      <li>118. Capa de almofada</li>
-      <li>119. Aparador de livros</li>
-      <li>120. Dispenser para petiscos</li>
-    </ul>
+      const wpp     = "5562991226031";
+      const section = document.getElementById("gift-list");
 
-    <h2>Quarto</h2>
-    <ul>
-      <li>121. Jogo de lençol casal</li>
-      <li>122. Cobertor</li>
-      <li>123. Travesseiros</li>
-      <li>124. Colcha decorativa</li>
-      <li>125. Cortina para quarto</li>
-      <li>126. Abajur de cabeceira</li>
-      <li>127. Protetor de colchão</li>
-      <li>128. Fronhas</li>
-      <li>129. Tapete de quarto</li>
-      <li>130. Despertador</li>
-      <li>131. Prateleira para livros</li>
-      <li>132. Organizadores de gaveta</li>
-      <li>133. Porta-joias</li>
-      <li>134. Cesta decorativa</li>
-      <li>135. Espelho de parede</li>
-      <li>136. Cabideiro</li>
-      <li>137. Caixa para lembranças</li>
-      <li>138. Pendente de teto</li>
-      <li>139. Organizador de roupas</li>
-      <li>140. Luminária noturna</li>
-      <li>141. Porta-retrato triplo</li>
-      <li>142. Difusor de óleo essencial</li>
-      <li>143. Filtro de sonhos</li>
-      <li>144. Capa para colchão</li>
-      <li>145. Apoio de cabeça para cama</li>
-      <li>146. Capa para travesseiro</li>
-      <li>147. Organizador para sapatos</li>
-      <li>148. Almofada cervical</li>
-      <li>149. Prancha decorativa</li>
-      <li>150. Porta celular de cabeceira</li>
-      <li>151. Bandeja para cama</li>
-      <li>152. Lixeira pequena</li>
-      <li>153. Varal retrátil</li>
-      <li>154. Tábua de passar dobrável</li>
-      <li>155. Cortina blackout</li>
-      <li>156. Colchão inflável</li>
-      <li>157. Caixa de organização com tampa</li>
-      <li>158. Pufe para pés</li>
-      <li>159. Apoio lombar</li>
-      <li>160. Almofada de leitura</li>
-    </ul>
+      Object.entries(lists).forEach(([cat, items]) => {
+        const h2 = document.createElement("h2");
+        h2.textContent = cat;
+        section.appendChild(h2);
 
-    <h2>Banheiro</h2>
-    <ul>
-      <li>161. Jogo de toalhas</li>
-      <li>162. Tapete antiderrapante</li>
-      <li>163. Cortina de box</li>
-      <li>164. Suporte de papel higiênico</li>
-      <li>165. Porta escova de dentes</li>
-      <li>166. Dispenser de sabonete líquido</li>
-      <li>167. Lixeira para banheiro</li>
-      <li>168. Suporte de shampoo</li>
-      <li>169. Toalhas de rosto</li>
-      <li>170. Escova sanitária</li>
-      <li>171. Suporte para toalhas</li>
-      <li>172. Cesto de lixo com pedal</li>
-      <li>173. Organizador de armário</li>
-      <li>174. Espelho pequeno</li>
-      <li>175. Tapete de pia</li>
-      <li>176. Saboneteira</li>
-      <li>177. Prateleira de canto</li>
-      <li>178. Ganchos adesivos</li>
-      <li>179. Aromatizador</li>
-      <li>180. Toalha de piso</li>
-      <li>181. Escova para unhas</li>
-      <li>182. Kit higiene</li>
-      <li>183. Porta algodão</li>
-      <li>184. Porta cotonete</li>
-      <li>185. Cortina de plástico decorada</li>
-      <li>186. Protetor de vaso</li>
-      <li>187. Organizador de maquiagem</li>
-      <li>188. Cesto de roupa íntima</li>
-      <li>189. Caixa organizadora</li>
-      <li>190. Sabonete líquido decorado</li>
-      <li>191. Suporte de secador</li>
-      <li>192. Tapete para box</li>
-      <li>193. Dispenser de álcool gel</li>
-      <li>194. Espelho com aumento</li>
-      <li>195. Toalha infantil (para visitas)</li>
-      <li>196. Suporte de escova e pasta</li>
-      <li>197. Aromatizador de varetas</li>
-      <li>198. Organizador de banheiro</li>
-      <li>199. Porta-toalha de bancada</li>
-      <li>200. Kit sabonetes decorativos</li>
-    </ul>
-  </section>
+        const ul = document.createElement("ul");
+        items.forEach((item, i) => {
+          const text = `${i+1}. ${item}`;
+          const li   = document.createElement("li");
+          const a    = document.createElement("a");
+          a.textContent = text;
+          a.href        = `https://wa.me/${wpp}?text=${encodeURIComponent(text)}`;
+          a.target      = "_blank";
+          a.rel         = "noopener";
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        section.appendChild(ul);
+      });
+    })();
+  </script>
 </body>
 </html>

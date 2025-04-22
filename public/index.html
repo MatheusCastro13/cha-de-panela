@@ -1,89 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Chá de Panela - Dara & Matheus</title>
-<style>
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chá de Panela - Dara & Matheus</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-	background-image: url('images/convite2.png');
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	height: 100vh;
-	margin: 0;
-}
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-@media ( max-width : 768px) {
-	body {
-		background-position: top center;
-	}
-}
+    body {
+      background: url('images/convite-desktop.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+    }
 
-body, html {
-	height: 100%;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    @media (max-width: 768px) {
+      body {
+        background: url('images/convite-mobile.png') no-repeat center center fixed;
+        background-size: cover;
+      }
 
-.background {
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	padding: 1rem;
-	text-align: center;
-}
+      .btn-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 100%;
+      }
 
-.btn-container {
-	margin-top: 90%;
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-	width: 100%;
-	max-width: 300px;
-}
+      .btn {
+        font-size: 1.1rem;
+        padding: 1rem 1.25rem;
+      }
+    }
 
-.btn {
-	background-color: rgba(255, 255, 255, 0.85);
-	border: none;
-	padding: 1rem;
-	border-radius: 10px;
-	font-size: 1.1rem;
-	font-weight: bold;
-	color: #5a3e36;
-	cursor: pointer;
-	transition: background 0.3s ease;
-	text-decoration: none;
-}
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      max-width: 320px;
+      position: relative;
+      top: auto;
+      transform: none;
+    }
 
-.btn:hover {
-	background-color: rgba(255, 255, 255, 1);
-}
+    .btn {
+      background-color: rgba(255, 255, 255, 0.85);
+      border: none;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #5a3e36;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
 
-@media ( min-width : 600px) {
-	.btn-container {
-		flex-direction: row;
-		justify-content: center;
-	}
-}
-</style>
+    .btn:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    @media (min-width: 600px) {
+      .btn-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      body {
+        padding: 2rem;
+      }
+
+      .btn-container {
+        max-width: 600px;
+      }
+
+      .btn {
+        font-size: 1.1rem;
+        padding: 1rem 1.25rem;
+      }
+    }
+  </style>
 </head>
 <body>
-	<div class="background">
-		<div class="btn-container">
-			<a
-				href="https://www.google.com/maps/place/Igreja+de+Deus+no+Brasil/@-16.658078,-49.16582,17z/data=!3m1!4b1!4m6!3m5!1s0x935eee7d929f1ebb:0x130209938c3c4810!8m2!3d-16.6580832!4d-49.1632451!16s%2Fg%2F11c1zrzcf3?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D"
-				class="btn" target="_blank">Ver Localização</a> <a
-				href="listadepresentes.html" class="btn" target="_blank">Ver
-				Lista de Presentes</a>
-		</div>
-	</div>
+  <div class="btn-container">
+    <a
+      href="https://www.google.com/maps/place/Igreja+de+Deus+no+Brasil/..."
+      class="btn" target="_blank">Ver Localização</a>
+    <a
+      href="listadepresentes.html"
+      class="btn" target="_blank">Ver Lista de Presentes</a>
+    <a
+      href="https://wa.me/5562991226031?text=Confirmo%20minha%20presença%20no%20Chá%20de%20Panela%20de%20Dara%20%26%20Matheus"
+      class="btn" target="_blank" rel="noopener">Confirmar Presença</a>
+  </div>
 </body>
 </html>
