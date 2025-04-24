@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data e Local – Chá de Panela</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffaf8;       
+      color: #5a3e36;                  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .date {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    .map-container {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    a.open-map {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #5a3e36;
+      border: 2px solid #5a3e36;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+    a.open-map:hover {
+      background: #5a3e36;
+      color: #fffaf8;
+    }
+
+    @media (max-width: 480px) {
+      .date {
+        font-size: 2rem;
+      }
+      h1 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chá de Panela<br>Dara &amp; Matheus</h1>
+
+    <p class="date">7 de junho às 18:00</p>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1222.4034460311586!2d-49.16785851080301!3d-16.658078032495103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935eee7d929f1ebb%3A0x130209938c3c4810!2sIgreja%20de%20Deus%20no%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1713993600000!5m2!1spt-BR!2sbr"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <a
+      class="open-map"
+      href="https://www.google.com/maps/place/Igreja+de+Deus+no+Brasil/@-16.658078,-49.1678585,17z/data=!3m1!4b1!4m6!3m5!1s0x935eee7d929f1ebb:0x130209938c3c4810!8m2!3d-16.6580832!4d-49.1632451!16s%2Fg%2F11c1zrzcf3?entry=ttu"
+      target="_blank"
+      rel="noopener">
+      Abrir no Google Maps
+    </a>
+  </div>
+</body>
+</html>
