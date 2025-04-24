@@ -19,27 +19,17 @@
       background-color: #fffaf8;
       color: #5a3e36;
       display: flex;
+      flex-direction: column;       /* muda para coluna */
       align-items: center;
-      justify-content: center;
       min-height: 100vh;
       padding: 1rem;
       text-align: center;
     }
-    .container {
-      max-width: 600px;
-      width: 100%;
-      background: rgba(255,255,255,0.9);
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      position: relative;
-    }
 
     /* --- BOTÃO VOLTAR --- */
     .back-btn {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
+      align-self: flex-start;       /* posiciona no início da coluna */
+      margin-bottom: 1rem;          /* espaço abaixo do botão */
       text-decoration: none;
       font-weight: bold;
       color: #5a3e36;
@@ -51,6 +41,15 @@
     .back-btn:hover {
       background: #5a3e36;
       color: #fffaf8;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     h1 {
@@ -94,6 +93,7 @@
       background: #5a3e36;
       color: #fffaf8;
     }
+
     @media (max-width: 480px) {
       .date {
         font-size: 2rem;
@@ -105,9 +105,9 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <a href="index.html" class="back-btn">← Voltar</a>
+  <a href="index.html" class="back-btn">← Voltar</a>
 
+  <div class="container">
     <h1>Chá de Panela<br>Dara &amp; Matheus</h1>
     <p class="date">7 de junho às 18:00</p>
 
