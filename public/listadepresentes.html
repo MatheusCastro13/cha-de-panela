@@ -1,86 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lista de Presentes - Dara & Matheus</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #fffaf8;
-      color: #5a3e36;
-      line-height: 1.5;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lista de Presentes - Dara & Matheus</title>
+<style>
+body {
+	font-family: 'Segoe UI', sans-serif;
+	margin: 0;
+	background-color: #fffaf8;
+	color: #5a3e36;
+	line-height: 1.5;
+}
 
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header h1 { font-size: 2rem; }
-    header p  { font-size: 1.1rem; color: #7c5e58; }
+.back-btn {
+	display: inline-block;
+	margin: 1rem;
+	font-weight: bold;
+	text-decoration: none;
+	color: #5a3e36;
+	border: 2px solid #5a3e36;
+	padding: 0.4rem 0.8rem;
+	border-radius: 6px;
+	transition: background 0.3s, color 0.3s;
+}
 
-    section {
-      padding: 1rem;
-      max-width: 1200px;
-      margin: auto;
-    }
+.back-btn:hover {
+	background: #5a3e36;
+	color: #fffaf8;
+}
 
-    h2 {
-      font-size: 1.25rem;
-      margin-top: 2rem;
-      border-bottom: 2px solid #e3c5b8;
-      padding-bottom: 0.5rem;
-    }
+header {
+	text-align: center;
+	padding: 2rem 1rem;
+}
 
-    ul {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
-      list-style: none;
-      padding: 0;
-      margin-top: 1rem;
-    }
+header h1 {
+	font-size: 2rem;
+}
 
-    li {
-      background: #fff;
-      border: 1px solid #e3c5b8;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-    li a {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-    }
+header p {
+	font-size: 1.1rem;
+	color: #7c5e58;
+}
 
-    @media (min-width: 600px) {
-      ul { grid-template-columns: repeat(2, 1fr); }
-      header h1 { font-size: 2.25rem; }
-    }
+section {
+	padding: 1rem;
+	max-width: 1200px;
+	margin: auto;
+}
 
-    @media (min-width: 900px) {
-      ul { grid-template-columns: repeat(3, 1fr); }
-      h2 { font-size: 1.5rem; }
-    }
+h2 {
+	font-size: 1.25rem;
+	margin-top: 2rem;
+	border-bottom: 2px solid #e3c5b8;
+	padding-bottom: 0.5rem;
+}
 
-    @media (min-width: 1200px) {
-      ul { grid-template-columns: repeat(4, 1fr); }
-      section { padding: 2rem; }
-      header { padding: 3rem 1rem 2rem; }
-    }
-  </style>
+ul {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0.75rem;
+	list-style: none;
+	padding: 0;
+	margin-top: 1rem;
+}
+
+li {
+	background: #fff;
+	border: 1px solid #e3c5b8;
+	padding: 0.75rem 1rem;
+	border-radius: 8px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+li a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
+@media ( min-width : 600px) {
+	ul {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	header h1 {
+		font-size: 2.25rem;
+	}
+}
+
+@media ( min-width : 900px) {
+	ul {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+}
+
+@media ( min-width : 1200px) {
+	ul {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	section {
+		padding: 2rem;
+	}
+	header {
+		padding: 3rem 1rem 2rem;
+	}
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Lista de Presentes</h1>
-    <p>Ficaremos muito felizes com qualquer presente 💝</p>
-  </header>
+	<a href="index.html" class="back-btn">← Voltar</a>
+	<header>
+		<h1>Lista de Presentes</h1>
+		<p>Ficaremos muito felizes com qualquer presente 💝</p>
+	</header>
 
-  <section id="gift-list"></section>
+	<section id="gift-list"></section>
 
-  <script>
+	<script>
     (function() {
     	const lists = {
     	        "Utensílios de Cozinha": [

@@ -4,23 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Data e Local – Chá de Panela</title>
-
   <link
     href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
     rel="stylesheet"
   />
-
   <style>
     *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fffaf8;       
-      color: #5a3e36;                  
+      background-color: #fffaf8;
+      color: #5a3e36;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -28,7 +25,6 @@
       padding: 1rem;
       text-align: center;
     }
-
     .container {
       max-width: 600px;
       width: 100%;
@@ -36,20 +32,37 @@
       border-radius: 12px;
       padding: 2rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    /* --- BOTÃO VOLTAR --- */
+    .back-btn {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #5a3e36;
+      border: 2px solid #5a3e36;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .back-btn:hover {
+      background: #5a3e36;
+      color: #fffaf8;
     }
 
     h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-
     .date {
       font-family: 'Great Vibes', cursive;
       font-size: 2.5rem;
       margin-bottom: 2rem;
       line-height: 1.2;
     }
-
     .map-container {
       position: relative;
       overflow: hidden;
@@ -58,7 +71,6 @@
       border-radius: 8px;
       margin-bottom: 1rem;
     }
-
     .map-container iframe {
       position: absolute;
       top: 0;
@@ -67,7 +79,6 @@
       height: 100%;
       border: 0;
     }
-
     a.open-map {
       display: inline-block;
       margin-top: 0.5rem;
@@ -83,7 +94,6 @@
       background: #5a3e36;
       color: #fffaf8;
     }
-
     @media (max-width: 480px) {
       .date {
         font-size: 2rem;
@@ -96,8 +106,9 @@
 </head>
 <body>
   <div class="container">
-    <h1>Chá de Panela<br>Dara &amp; Matheus</h1>
+    <a href="index.html" class="back-btn">← Voltar</a>
 
+    <h1>Chá de Panela<br>Dara &amp; Matheus</h1>
     <p class="date">7 de junho às 18:00</p>
 
     <div class="map-container">
