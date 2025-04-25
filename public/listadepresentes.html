@@ -276,6 +276,23 @@ li a {
         });
         section.appendChild(ul);
       });
+      
+      const ch2 = document.createElement("h2");
+      ch2.textContent = "Deseja nos presentear com algum item fora da lista?";
+      section.appendChild(ch2);
+      
+      const nul = document.createElement("ul");
+
+      const ntext = `Descreva o item: \n`;
+      const nli   = document.createElement("li");
+      const na    = document.createElement("a");
+      na.textContent = "Conte-nos!";
+      na.href        = `https://wa.me/${wpp}?text=${encodeURIComponent(ntext)}`;
+      na.target      = "_blank";
+      na.rel         = "noopener";
+      nli.appendChild(na);
+      nul.appendChild(nli);
+      section.appendChild(nul);
     })();
   </script>
 </body>
