@@ -109,6 +109,16 @@ li a {
 		padding: 3rem 1rem 2rem;
 	}
 }
+
+.claimed {
+	color: #a0a0a0;
+	text-decoration: line-through;
+	cursor: default;
+}
+
+.claimed:hover {
+	background: none;
+}
 </style>
 </head>
 <body>
@@ -123,6 +133,16 @@ li a {
 
 	<script>
     (function() {
+
+    	'use strict';
+
+        const confirmedItems = [
+          "Utensílios de Cozinha|16",
+          "Utensílios de Cozinha|34",
+          "Utensílios de Cozinha|39", 
+          "Utensílios de Cozinha|45", 
+          "Utensílios de Mesa|6"    
+        ];
     	const lists = {
     	        "Utensílios de Cozinha": [
     	          "Afiador de faca",
@@ -261,46 +281,57 @@ li a {
     	        ]
     	      };
 
-      const wpp     = "556293305397";
-      const section = document.getElementById("gift-list");
-      
-      const ch2 = document.createElement("h2");
-      ch2.textContent = "Deseja nos presentear com algum item fora da lista?";
-      section.appendChild(ch2);
-      
-      const nul = document.createElement("ul");
+    	const wpp = '556293305397';
 
-      const ntext = `Descreva o item: \n`;
-      const nli   = document.createElement("li");
-      const na    = document.createElement("a");
-      na.textContent = "Conte-nos!";
-      na.href        = `https://wa.me/${wpp}?text=${encodeURIComponent(ntext)}`;
-      na.target      = "_blank";
-      na.rel         = "noopener";
-      nli.appendChild(na);
-      nul.appendChild(nli);
-      section.appendChild(nul);
+    	  const section = document.getElementById('gift-list');
 
-      Object.entries(lists).forEach(([cat, items]) => {
-        const h2 = document.createElement("h2");
-        h2.textContent = cat;
-        section.appendChild(h2);
+    	  const h2Custom = document.createElement('h2');
+    	  h2Custom.textContent = 'Deseja nos presentear com algum item fora da lista?';
+    	  section.appendChild(h2Custom);
 
-        const ul = document.createElement("ul");
-        items.forEach((item, i) => {
-          const text = `${i+1}. ${item}`;
-          const li   = document.createElement("li");
-          const a    = document.createElement("a");
-          a.textContent = text;
-          a.href        = `https://wa.me/${wpp}?text=${encodeURIComponent(text)}`;
-          a.target      = "_blank";
-          a.rel         = "noopener";
-          li.appendChild(a);
-          ul.appendChild(li);
-        });
-        section.appendChild(ul);
-      });
-    })();
-  </script>
+    	  const ulCustom = document.createElement('ul');
+    	  const liCustom = document.createElement('li');
+    	  const aCustom = document.createElement('a');
+    	  aCustom.textContent = 'Conte-nos!';
+    	  aCustom.href   = `https://wa.me/${wpp}?text=${encodeURIComponent('Descreva o item:')}`;
+    	  aCustom.target = '_blank';
+    	  aCustom.rel    = 'noopener';
+    	  liCustom.appendChild(aCustom);
+    	  ulCustom.appendChild(liCustom);
+    	  section.appendChild(ulCustom);
+
+    	  Object.entries(lists).forEach(([category, items]) => {
+    	    const h2 = document.createElement('h2');
+    	    h2.textContent = category;
+    	    section.appendChild(h2);
+
+    	    const ul = document.createElement('ul');
+
+    	    items.forEach((item, index) => {
+    	      const key  = `${category}|${index}`;
+    	      const text = `${index + 1}. ${item}`;
+    	      const li   = document.createElement('li');
+
+    	      if (confirmedItems.includes(key)) {
+    	        const span = document.createElement('span');
+    	        span.textContent = text;
+    	        span.classList.add('claimed');
+    	        li.appendChild(span);
+    	      } else {
+    	        const a = document.createElement('a');
+    	        a.textContent = text;
+    	        a.href        = `https://wa.me/${wpp}?text=${encodeURIComponent(text)}`;
+    	        a.target      = '_blank';
+    	        a.rel         = 'noopener';
+    	        li.appendChild(a);
+    	      }
+
+    	      ul.appendChild(li);
+    	    });
+
+    	    section.appendChild(ul);
+    	  });
+    	})();
+    	</script>
 </body>
 </html>
